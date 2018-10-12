@@ -4,5 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-autowire="byName">
-    <bean id = "bean1" class="com.lc.springdemo.model.Bean1" scope="prototype"/>
+    <bean id = "bean1" class="com.lc.springdemo.model.Bean1" />
 </beans>
