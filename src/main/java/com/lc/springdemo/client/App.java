@@ -1,6 +1,7 @@
 package com.lc.springdemo.client;
 
 import com.lc.springdemo.model.Bean1;
+import com.lc.springdemo.model.Bean3;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -29,6 +30,7 @@ public class App {
          */
         ApplicationContext factory1=new ClassPathXmlApplicationContext(new String[] {"bean2.xml","bean1.xml"});
         Bean1 bean1 = (Bean1)factory1.getBean("bean1");
+        Bean3 bean3 = (Bean3)factory1.getBean("bean3");//class上面没有注解，属性有注解的无法载入spring容器
         /**
          * 通过文件系统加载XML文件，返回ApplicationContext
          */
